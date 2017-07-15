@@ -42,7 +42,6 @@ module.exports = {
     yoda: 'error',
     strict: 'error',
     'no-undef-init': 'error',
-    'no-undefined': 'error',
     'no-use-before-define': ['error', 'nofunc'],
     // Node-specific problems
     'callback-return': 'error',
