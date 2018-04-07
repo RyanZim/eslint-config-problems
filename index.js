@@ -55,12 +55,13 @@ module.exports = {
     'no-useless-constructor': 'error',
     'no-useless-rename': 'error',
     // Force esnext features
-    // NOTE: Use the node6 config to force rest/spread operator usage
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-arrow-callback': 'error',
     'prefer-numeric-literals': 'error',
     'prefer-template': 'error',
+    'prefer-spread': 'error',
+    'prefer-rest-params': 'error',
     // NOTE: Very opinionated:
     'prefer-const': 'error',
   },

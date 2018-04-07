@@ -40,25 +40,16 @@ Rules were chosen based on the following criteria:
 
 ### ES2015+
 
-By default `eslint-config-problems` forces the use of ES2015+ features supported by Node.js versions 4 and higher. Here are the rules enforced:
+By default `eslint-config-problems` forces the use of ES2015+ features supported by Node.js versions 6 and higher. Here are the rules enforced:
 
 - `no-var`-  Use `let`/`const` instead.
 - `object-shorthand` - Use object shorthand where possible.
 - `prefer-arrow-callback` - Use arrow functions as callbacks where possible.
 - `prefer-numeric-literals` - Don't use `parseInt()` to write binary, octal, and hexadecimal numbers, use the literal form instead.
 - `prefer-template` - Use template strings instead of string concatenation.
-- `prefer-const` - I realize this is very opinionated; if you don't like it, add `prefer-const: off` to your config.
-
-If you would like a config that omits these rules, for use in ES5 environments, I'd be glad to add such a config. Just open an issue.
-
----
-
-There is a sub-config, accessed via `extends: problems/node6` that contains the base config, plus these additional rules:
-
 - `prefer-spread` - Use the spread operator instead of `.apply` where possible.
 - `prefer-rest-params` - Use rest parameters instead of `arguments`.
-
-This is for use in Node versions 6 and higher that support rest/spread.
+- `prefer-const` - I realize this is very opinionated; if you don't like it, add `prefer-const: off` to your config.
 
 ### I disagree with rule X; you missed rule Y
 
