@@ -11,6 +11,8 @@ module.exports = {
     'no-mixed-spaces-and-tabs': 'off',
     // Allow empty catch statements
     'no-empty': ['error', { allowEmptyCatch: true }],
+    // Allow while (true)
+    'no-constant-condition': ['error', { checkLoops: false }],
     // Additional warnings
     'no-alert': 'warn',
     // Additional problems
