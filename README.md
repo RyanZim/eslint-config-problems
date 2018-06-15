@@ -12,6 +12,7 @@ It's designed for use with [Prettier](https://prettier.io/), the opinionated cod
 
 - [Rules](#rules)
   - [ES2015+](#es2015)
+  - [`node8` sub-config](#node8-sub-config)
   - [I disagree with rule X; you missed rule Y](#i-disagree-with-rule-x-you-missed-rule-y)
 - [Installation & Usage](#installation--usage)
   - [Just ESLint](#just-eslint)
@@ -51,6 +52,10 @@ By default `eslint-config-problems` forces the use of ES2015+ features supported
 - `prefer-rest-params` - Use rest parameters instead of `arguments`.
 - `prefer-const` - I realize this is very opinionated; if you don't like it, add `prefer-const: off` to your config.
 
+### `node8` sub-config
+
+There is a sub-config, accessible at `problems/node8`, which forces ES features supported by Node.js 8+. Specifically, it inforces the use of the exponentiation operator instead of `Math.pow()`.
+
 ### I disagree with rule X; you missed rule Y
 
 If you disagree; feel free to open an issue. I'm open to changing rules if you have a good reason.
@@ -68,7 +73,7 @@ If I missed a rule that prevents an actual problem or is otherwise in keeping wi
 In your **eslintrc.yaml**:
 
 ```yaml
-extends: 'problems' # or extends: 'problems/node6'
+extends: 'problems'
 env:
   # Set your environments here; for example:
   node: true
@@ -81,7 +86,7 @@ env:
 In your **eslintrc.yaml**:
 
 ```yaml
-extends: 'problems' # or extends: 'problems/node6'
+extends: 'problems'
 env:
   # Set your environments here; for example:
   node: true
