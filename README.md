@@ -9,7 +9,6 @@ It's designed for use with [Prettier](https://prettier.io/), the opinionated cod
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Rules](#rules)
   - [ES2015+](#es2015)
   - [`node8` sub-config](#node8-sub-config)
@@ -43,7 +42,7 @@ Rules were chosen based on the following criteria:
 
 By default `eslint-config-problems` forces the use of ES2015+ features supported by Node.js versions 6 and higher. Here are the rules enforced:
 
-- `no-var`-  Use `let`/`const` instead.
+- `no-var` - Use `let`/`const` instead.
 - `object-shorthand` - Use object shorthand where possible.
 - `prefer-arrow-callback` - Use arrow functions as callbacks where possible.
 - `prefer-numeric-literals` - Don't use `parseInt()` to write binary, octal, and hexadecimal numbers, use the literal form instead.

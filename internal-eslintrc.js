@@ -5,11 +5,5 @@ const defaultsDeep = require('lodash.defaultsdeep');
 // eslint-config-problems itself
 
 module.exports = defaultsDeep({}, require('./index.js'), {
-  env: {
-    node: true,
-  },
-  plugins: ['prettier'],
-  rules: {
-    'prettier/prettier': ['error', { singleQuote: true, trailingComma: 'es5' }],
-  },
+  env: { node: true },
 });
