@@ -41,7 +41,8 @@ module.exports = {
     'no-useless-call': 'error',
     'no-useless-return': 'error',
     'no-with': 'error',
-    yoda: 'error',
+    // `exceptRange` because http://llewellynfalco.blogspot.com/2016/02/dont-use-greater-than-sign-in.html
+    yoda: ['error', 'never', { exceptRange: true }],
     strict: 'error',
     'no-undef-init': 'error',
     'no-use-before-define': ['error', 'nofunc'],
