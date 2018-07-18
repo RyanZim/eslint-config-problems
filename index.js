@@ -41,7 +41,7 @@ module.exports = {
     'no-useless-call': 'error',
     'no-useless-return': 'error',
     'no-with': 'error',
-    yoda: 'error',
+    yoda: ['error', 'never', { onlyEquality: true }],
     strict: 'error',
     'no-undef-init': 'error',
     'no-use-before-define': ['error', 'nofunc'],
