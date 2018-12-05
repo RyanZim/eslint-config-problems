@@ -51,17 +51,25 @@ By default `eslint-config-problems` forces the use of ES2015+ features supported
 - `prefer-rest-params` - Use rest parameters instead of `arguments`.
 - `prefer-const` - I realize this is very opinionated; if you don't like it, add `prefer-const: off` to your config.
 
-### `node8` sub-config
-
-There is a sub-config, accessible at `problems/node8`, which forces ES features supported by Node.js 8+. Specifically, it enforces the use of the exponentiation operator instead of `Math.pow()`.
-
-It also sets `ecmaVersion: 2017` in the `parserOptions`, so that ESLint can parse `async`/`await` code with no additional setup.
-
 ### I disagree with rule X; you missed rule Y
 
 If you disagree; feel free to open an issue. I'm open to changing rules if you have a good reason.
 
 If I missed a rule that prevents an actual problem or is otherwise in keeping with the general guidelines above, please open an issue as well; I just might add it.
+
+## sub-configs
+
+### `node8`
+
+There is a sub-config, accessible at `problems/node8`, which forces ES features supported by Node.js 8+. Specifically, it enforces the use of the exponentiation operator instead of `Math.pow()`.
+
+It also sets `ecmaVersion: 2017` in the `parserOptions`, so that ESLint can parse `async`/`await` code with no additional setup.
+
+### `node10`
+
+The `problems/node10` sub-config forces ES2018 features supported by Node.js v10+. Specifically, it disallows the use of `Object.assign()` where the object spread operator could be used.
+
+It also sets `ecmaVersion: 2018` in the `parserOptions`, so that ESLint can parse the ES2018 syntax that Node.js v10 supports.
 
 ## Installation & Usage
 
