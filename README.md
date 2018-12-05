@@ -55,6 +55,8 @@ By default `eslint-config-problems` forces the use of ES2015+ features supported
 
 There is a sub-config, accessible at `problems/node8`, which forces ES features supported by Node.js 8+. Specifically, it enforces the use of the exponentiation operator instead of `Math.pow()`.
 
+It also sets `ecmaVersion: 2017` in the `parserOptions`, so that ESLint can parse `async`/`await` code with no additional setup.
+
 ### I disagree with rule X; you missed rule Y
 
 If you disagree; feel free to open an issue. I'm open to changing rules if you have a good reason.
