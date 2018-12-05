@@ -53,7 +53,7 @@ By default `eslint-config-problems` forces the use of ES2015+ features supported
 
 ### `node8` sub-config
 
-There is a sub-config, accessible at `problems/node8`, which forces ES features supported by Node.js 8+. Specifically, it inforces the use of the exponentiation operator instead of `Math.pow()`.
+There is a sub-config, accessible at `problems/node8`, which forces ES features supported by Node.js 8+. Specifically, it enforces the use of the exponentiation operator instead of `Math.pow()`.
 
 ### I disagree with rule X; you missed rule Y
 
