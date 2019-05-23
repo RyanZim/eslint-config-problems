@@ -77,6 +77,13 @@ It also sets `ecmaVersion: 2018` in the `parserOptions`, so that ESLint can pars
 
 `eslint-config-problems` doesn't set any environments by default, other than the `es6` environment (to turn on the ES2015 parser, allow `Promise`, etc.) So you'll have to manually set your environment in your ESLint config. Here's a [list of environments](http://eslint.org/docs/user-guide/configuring#specifying-environments).
 
+If you're using ES Modules, you will need to set `sourceType: module` in the `parserOptions`, like this:
+
+```yaml
+parserOptions:
+  sourceType: module
+```
+
 ### Just ESLint
 
     npm install -D eslint eslint-config-problems
