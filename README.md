@@ -13,7 +13,6 @@ It's designed for use with [Prettier](https://prettier.io/), the opinionated cod
   - [ES2015+](#es2015)
   - [I disagree with rule X; you missed rule Y](#i-disagree-with-rule-x-you-missed-rule-y)
 - [sub-configs](#sub-configs)
-  - [`node8`](#node8)
   - [`node10`](#node10)
 - [Installation & Usage](#installation--usage)
   - [Just ESLint](#just-eslint)
