@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-problems",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "An eslint config that catches problems in your code, without checking style. For use with prettier.",
   "keywords": [
     "eslint",
