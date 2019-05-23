@@ -21,7 +21,7 @@ module.exports = {
     // Additional problems
     'array-callback-return': 'error',
     'dot-notation': 'error',
-    eqeqeq: ['error', 'smart'],
+    'eqeqeq': ['error', 'smart'],
     'no-caller': 'error',
     'no-else-return': 'error',
     'no-eval': 'error',
@@ -44,8 +44,8 @@ module.exports = {
     'no-useless-call': 'error',
     'no-useless-return': 'error',
     'no-with': 'error',
-    yoda: ['error', 'never', { onlyEquality: true }],
-    strict: 'error',
+    'yoda': ['error', 'never', { onlyEquality: true }],
+    'strict': 'error',
     'no-undef-init': 'error',
     'no-use-before-define': ['error', 'nofunc'],
     // Node-specific problems

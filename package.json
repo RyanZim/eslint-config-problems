@@ -38,6 +38,7 @@
   },
   "prettier": {
     "singleQuote": true,
+    "quoteProps": "consistent",
     "trailingComma": "es5"
   },
   "renovate": {
