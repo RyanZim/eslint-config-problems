@@ -42,7 +42,7 @@ Rules were chosen based on the following criteria:
 
 ### ES2015+
 
-By default `eslint-config-problems` forces the use of ES2015+ features supported by Node.js versions 6 and higher. Here are the rules enforced:
+By default `eslint-config-problems` forces the use of ES2015+ features supported by Node.js versions 8 and higher. Here are the rules enforced:
 
 - `no-var` - Use `let`/`const` instead.
 - `object-shorthand` - Use object shorthand where possible.
@@ -51,7 +51,10 @@ By default `eslint-config-problems` forces the use of ES2015+ features supported
 - `prefer-template` - Use template strings instead of string concatenation.
 - `prefer-spread` - Use the spread operator instead of `.apply` where possible.
 - `prefer-rest-params` - Use rest parameters instead of `arguments`.
+- Use the exponentiation operator (`**`) instead of `Math.pow()` (enforced via `no-restricted-properties`).
 - `prefer-const` - I realize this is very opinionated; if you don't like it, add `prefer-const: off` to your config.
+
+It also sets `ecmaVersion: 2017` in the `parserOptions`, so that ESLint can parse `async`/`await` code with no additional setup.
 
 ### I disagree with rule X; you missed rule Y
 
@@ -61,12 +64,6 @@ If I missed a rule that prevents an actual problem or is otherwise in keeping wi
 
 ## sub-configs
 
-### `node8`
-
-There is a sub-config, accessible at `problems/node8`, which forces ES features supported by Node.js 8+. Specifically, it enforces the use of the exponentiation operator instead of `Math.pow()`.
-
-It also sets `ecmaVersion: 2017` in the `parserOptions`, so that ESLint can parse `async`/`await` code with no additional setup.
-
 ### `node10`
 
 The `problems/node10` sub-config forces ES2018 features supported by Node.js v10+. Specifically, it disallows the use of `Object.assign()` where the object spread operator could be used.
@@ -75,7 +72,7 @@ It also sets `ecmaVersion: 2018` in the `parserOptions`, so that ESLint can pars
 
 ## Installation & Usage
 
-`eslint-config-problems` doesn't set any environments by default, other than the `es6` environment (to turn on the ES2015 parser, allow `Promise`, etc.) So you'll have to manually set your environment in your ESLint config. Here's a [list of environments](http://eslint.org/docs/user-guide/configuring#specifying-environments).
+`eslint-config-problems` doesn't set any environments by default, other than the `es6` environment. So you'll have to manually set your environment in your ESLint config. Here's a [list of environments](http://eslint.org/docs/user-guide/configuring#specifying-environments).
 
 If you're using ES Modules, you will need to set `sourceType: module` in the `parserOptions`, like this:
 

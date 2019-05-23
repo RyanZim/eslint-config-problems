@@ -3,6 +3,9 @@ module.exports = {
   env: {
     es6: true,
   },
+  parserOptions: {
+    ecmaVersion: 2017,
+  },
   extends: 'eslint:recommended',
   rules: {
     // First, turn down some eslint:recommended rules
@@ -64,6 +67,15 @@ module.exports = {
     'prefer-template': 'error',
     'prefer-spread': 'error',
     'prefer-rest-params': 'error',
+    // https://github.com/eslint/eslint/issues/10482#issuecomment-397761810
+    'no-restricted-properties': [
+      'error',
+      {
+        object: 'Math',
+        property: 'pow',
+        message: 'Use the exponentiation operator (**) instead of Math.pow()',
+      },
+    ],
     // NOTE: Very opinionated:
     'prefer-const': 'error',
   },
