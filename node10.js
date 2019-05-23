@@ -2,7 +2,7 @@
 module.exports = {
   extends: 'problems/node8',
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2019,
   },
   rules: {
     'prefer-object-spread': 'error',

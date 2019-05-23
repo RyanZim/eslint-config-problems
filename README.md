@@ -68,7 +68,7 @@ If I missed a rule that prevents an actual problem or is otherwise in keeping wi
 
 The `problems/node10` sub-config forces ES2018 features supported by Node.js v10+. Specifically, it disallows the use of `Object.assign()` where the object spread operator could be used.
 
-It also sets `ecmaVersion: 2018` in the `parserOptions`, so that ESLint can parse the ES2018 syntax that Node.js v10 supports.
+It also sets `ecmaVersion: 2019` in the `parserOptions`, so that ESLint can parse the ES2019 syntax that Node.js v10 supports.
 
 ## Installation & Usage
 
