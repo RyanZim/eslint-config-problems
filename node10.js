@@ -1,6 +1,6 @@
 'use strict';
 module.exports = {
-  extends: 'problems/node8',
+  extends: 'problems',
   parserOptions: {
     ecmaVersion: 2019,
   },
