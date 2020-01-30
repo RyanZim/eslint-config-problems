@@ -12,8 +12,6 @@ It's designed for use with [Prettier](https://prettier.io/), the opinionated cod
 - [Rules](#rules)
   - [ES2015+](#es2015)
   - [I disagree with rule X; you missed rule Y](#i-disagree-with-rule-x-you-missed-rule-y)
-- [sub-configs](#sub-configs)
-  - [`node10`](#node10)
 - [Installation & Usage](#installation--usage)
   - [Just ESLint](#just-eslint)
   - [With `eslint-plugin-prettier`](#with-eslint-plugin-prettier)
@@ -41,7 +39,7 @@ Rules were chosen based on the following criteria:
 
 ### ES2015+
 
-By default `eslint-config-problems` forces the use of ES2015+ features supported by Node.js versions 8 and higher. Here are the rules enforced:
+By default `eslint-config-problems` forces the use of ES2015+ features supported by Node.js versions 10 and higher. Here are the rules enforced:
 
 - `no-var` - Use `let`/`const` instead.
 - `object-shorthand` - Use object shorthand where possible.
@@ -51,23 +49,17 @@ By default `eslint-config-problems` forces the use of ES2015+ features supported
 - `prefer-spread` - Use the spread operator instead of `.apply` where possible.
 - `prefer-rest-params` - Use rest parameters instead of `arguments`.
 - Use the exponentiation operator (`**`) instead of `Math.pow()` (enforced via `no-restricted-properties`).
+- `prefer-object-spread` - Use object spread where possible, instead of `Object.assign()`
+- Use optional catch bindings when not using the error variable in the catch block (enforced by `no-unused-vars` with `caughtErrors: 'all'`)
 - `prefer-const` - I realize this is very opinionated; if you don't like it, add `prefer-const: off` to your config.
 
-It also sets `ecmaVersion: 2017` in the `parserOptions`, so that ESLint can parse `async`/`await` code with no additional setup.
+It also sets `ecmaVersion: 2020` in the `parserOptions`, so that ESLint can parse modern code (including `BigInt` in Node 10.8+) with no additional setup.
 
 ### I disagree with rule X; you missed rule Y
 
 If you disagree; feel free to open an issue. I'm open to changing rules if you have a good reason.
 
 If I missed a rule that prevents an actual problem or is otherwise in keeping with the general guidelines above, please open an issue as well; I just might add it.
-
-## sub-configs
-
-### `node10`
-
-The `problems/node10` sub-config forces ES2018 features supported by Node.js v10+. Specifically, it disallows the use of `Object.assign()` where the object spread operator could be used.
-
-It also sets `ecmaVersion: 2019` in the `parserOptions`, so that ESLint can parse the ES2019 syntax that Node.js v10 supports.
 
 ## Installation & Usage
 

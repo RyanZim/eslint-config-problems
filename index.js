@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
   },
   parserOptions: {
-    ecmaVersion: 2017,
+    ecmaVersion: 2020,
   },
   extends: 'eslint:recommended',
   rules: {
@@ -76,6 +76,8 @@ module.exports = {
         message: 'Use the exponentiation operator (**) instead of Math.pow()',
       },
     ],
+    'prefer-object-spread': 'error',
+    'no-unused-vars': ['error', { caughtErrors: 'all' }],
     // NOTE: Very opinionated:
     'prefer-const': 'error',
   },
