@@ -1,28 +1,32 @@
 'use strict';
 module.exports = {
   env: {
-    es6: true,
-  },
-  parserOptions: {
-    ecmaVersion: 2020,
+    es2020: true, // this also sets ecmaVersion parser option to 2020
   },
   extends: 'eslint:recommended',
+  reportUnusedDisableDirectives: true,
   rules: {
     // First, turn down some eslint:recommended rules
-    'no-console': 'warn',
     'no-debugger': 'warn',
     'no-mixed-spaces-and-tabs': 'off',
     // Allow empty catch statements
     'no-empty': ['error', { allowEmptyCatch: true }],
     // Allow while (true)
     'no-constant-condition': ['error', { checkLoops: false }],
+    // Don't allow unused error argument in catch blocks
+    'no-unused-vars': ['error', { caughtErrors: 'all' }],
     // Additional warnings
+    'no-console': 'warn',
     'no-alert': 'warn',
     // Additional problems
+    'no-useless-backreference': 'error',
+    'require-atomic-updates': 'error',
+    'accessor-pairs': 'error',
     'array-callback-return': 'error',
     'dot-notation': 'error',
     'eqeqeq': ['error', 'smart'],
     'no-caller': 'error',
+    'no-constructor-return': 'error',
     'no-else-return': 'error',
     'no-eval': 'error',
     'no-extend-native': 'error',
@@ -31,6 +35,7 @@ module.exports = {
     'no-iterator': 'error',
     'no-labels': 'error',
     'no-lone-blocks': 'error',
+    'no-loop-func': 'error',
     'no-multi-str': 'error',
     'no-new-func': 'error',
     'no-new-wrappers': 'error',
@@ -43,11 +48,15 @@ module.exports = {
     'no-unmodified-loop-condition': 'error',
     'no-useless-call': 'error',
     'no-useless-return': 'error',
-    'no-with': 'error',
+    'prefer-regex-literals': 'error',
     'yoda': ['error', 'never', { onlyEquality: true }],
     'strict': 'error',
     'no-undef-init': 'error',
     'no-use-before-define': ['error', 'nofunc'],
+    'no-array-constructor': 'error',
+    'no-lonely-if': 'error',
+    'no-new-object': 'error',
+    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     // Node-specific problems
     'callback-return': 'error',
     'handle-callback-err': 'error',
@@ -63,21 +72,19 @@ module.exports = {
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-arrow-callback': 'error',
-    'prefer-numeric-literals': 'error',
-    'prefer-template': 'error',
-    'prefer-spread': 'error',
-    'prefer-rest-params': 'error',
-    // https://github.com/eslint/eslint/issues/10482#issuecomment-397761810
-    'no-restricted-properties': [
+    'prefer-destructuring': [
       'error',
       {
-        object: 'Math',
-        property: 'pow',
-        message: 'Use the exponentiation operator (**) instead of Math.pow()',
+        VariableDeclarator: { array: false, object: true },
+        AssignmentExpression: { array: false, object: false },
       },
     ],
+    'prefer-numeric-literals': 'error',
+    'prefer-rest-params': 'error',
+    'prefer-spread': 'error',
+    'prefer-template': 'error',
+    'prefer-exponentiation-operator': 'error',
     'prefer-object-spread': 'error',
-    'no-unused-vars': ['error', { caughtErrors: 'all' }],
     // NOTE: Very opinionated:
     'prefer-const': 'error',
   },
