@@ -57,12 +57,6 @@ module.exports = {
     'no-lonely-if': 'error',
     'no-new-object': 'error',
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
-    // Node-specific problems
-    'callback-return': 'error',
-    'handle-callback-err': 'error',
-    'no-buffer-constructor': 'error',
-    'no-new-require': 'error',
-    'no-path-concat': 'error',
     // ES2015+ specific problems
     'no-duplicate-imports': 'error',
     'no-useless-computed-key': 'error',
