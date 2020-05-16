@@ -6,21 +6,20 @@ module.exports = {
   extends: 'eslint:recommended',
   reportUnusedDisableDirectives: true,
   rules: {
-    // First, turn down some eslint:recommended rules
+    // OVERRIDES FOR 'eslint:recommended'
     'no-debugger': 'warn',
     'no-mixed-spaces-and-tabs': 'off',
-    // Allow empty catch statements
-    'no-empty': ['error', { allowEmptyCatch: true }],
-    // Allow while (true)
-    'no-constant-condition': ['error', { checkLoops: false }],
-    // Don't allow unused error argument in catch blocks
-    'no-unused-vars': ['error', { caughtErrors: 'all' }],
-    // Additional warnings
+    'no-empty': ['error', { allowEmptyCatch: true }], // Allow empty catch statements
+    'no-constant-condition': ['error', { checkLoops: false }], // Allow while (true)
+    'no-unused-vars': ['error', { caughtErrors: 'all' }], // Don't allow unused error argument in catch blocks
+    // WARNINGS
     'no-console': 'warn',
     'no-alert': 'warn',
-    // Additional problems
+    // PROBLEMS
+    // https://eslint.org/docs/rules/#possible-errors
     'no-useless-backreference': 'error',
     'require-atomic-updates': 'error',
+    // https://eslint.org/docs/rules/#best-practices
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
     'dot-notation': 'error',
@@ -50,22 +49,27 @@ module.exports = {
     'no-useless-return': 'error',
     'prefer-regex-literals': 'error',
     'yoda': ['error', 'never', { onlyEquality: true }],
+    // https://eslint.org/docs/rules/#strict-mode
     'strict': 'error',
+    // https://eslint.org/docs/rules/#variables
     'no-undef-init': 'error',
     'no-use-before-define': ['error', 'nofunc'],
+    // https://eslint.org/docs/rules/#stylistic-issues
     'no-array-constructor': 'error',
     'no-lonely-if': 'error',
     'no-new-object': 'error',
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
-    // ES2015+ specific problems
+    'prefer-exponentiation-operator': 'error',
+    'prefer-object-spread': 'error',
+    // https://eslint.org/docs/rules/#ecmascript-6
     'no-duplicate-imports': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-constructor': 'error',
     'no-useless-rename': 'error',
-    // Force esnext features
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-arrow-callback': 'error',
+    'prefer-const': 'error', // OPINIONATED
     'prefer-destructuring': [
       'error',
       {
@@ -77,9 +81,5 @@ module.exports = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
-    'prefer-exponentiation-operator': 'error',
-    'prefer-object-spread': 'error',
-    // NOTE: Very opinionated:
-    'prefer-const': 'error',
   },
 };
