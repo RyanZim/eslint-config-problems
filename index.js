@@ -17,9 +17,7 @@ module.exports = {
     'no-alert': 'warn',
     // PROBLEMS
     // https://eslint.org/docs/rules/#possible-errors
-    'no-loss-of-precision': 'error',
     'no-unreachable-loop': 'error',
-    'no-useless-backreference': 'error',
     'require-atomic-updates': 'error',
     // https://eslint.org/docs/rules/#best-practices
     'accessor-pairs': 'error',
