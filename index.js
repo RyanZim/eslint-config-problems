@@ -18,6 +18,7 @@ module.exports = {
     // PROBLEMS
     // https://eslint.org/docs/rules/#possible-errors
     'no-unreachable-loop': 'error',
+    'no-unused-private-class-members': 'error',
     'require-atomic-updates': 'error',
     // https://eslint.org/docs/rules/#best-practices
     'accessor-pairs': 'error',
