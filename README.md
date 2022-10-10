@@ -53,7 +53,7 @@ By default `eslint-config-problems` forces the use of ES2015+ features supported
 - Use optional catch bindings when not using the error variable in the catch block (enforced by `no-unused-vars` with `caughtErrors: 'all'`)
 - `prefer-const` - I realize this is very opinionated; if you don't like it, add `prefer-const: off` to your config.
 
-It also sets `ecmaVersion: 2020` in the `parserOptions`, so that ESLint can parse modern code (including `BigInt` in Node 10.8+) with no additional setup.
+It also sets `ecmaVersion: 2020` in the `parserOptions`, so that ESLint can parse modern code (including `BigInt`) with no additional setup.
 
 ### I disagree with rule X; you missed rule Y
 
