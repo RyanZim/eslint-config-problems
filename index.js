@@ -17,6 +17,7 @@ module.exports = {
     'no-alert': 'warn',
     // PROBLEMS
     // https://eslint.org/docs/rules/#possible-errors
+    'no-constant-binary-expression': 'error',
     'no-unreachable-loop': 'error',
     'no-unused-private-class-members': 'error',
     'require-atomic-updates': 'error',
