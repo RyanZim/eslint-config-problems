@@ -21,6 +21,7 @@ module.exports = {
     'no-constant-binary-expression': 'error',
     'no-constructor-return': 'error',
     'no-duplicate-imports': 'error',
+    'no-promise-executor-return': 'error',
     'no-self-compare': 'error',
     'no-unmodified-loop-condition': 'error',
     'no-unreachable-loop': 'error',
