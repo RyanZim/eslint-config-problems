@@ -23,7 +23,7 @@ module.exports = {
     'require-atomic-updates': 'error',
     // https://eslint.org/docs/rules/#best-practices
     'accessor-pairs': 'error',
-    'array-callback-return': 'error',
+    'array-callback-return': ['error', { checkForEach: true }],
     'dot-notation': 'error',
     'eqeqeq': ['error', 'smart'],
     'no-caller': 'error',
