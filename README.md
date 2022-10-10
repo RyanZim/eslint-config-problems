@@ -10,7 +10,6 @@ It's designed for use with [Prettier](https://prettier.io/), the opinionated cod
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Rules](#rules)
-  - [ES2015+](#es2015)
   - [I disagree with rule X; you missed rule Y](#i-disagree-with-rule-x-you-missed-rule-y)
 - [Installation & Usage](#installation--usage)
   - [Just ESLint](#just-eslint)
@@ -28,6 +27,7 @@ Rules were chosen based on the following criteria:
 - Disallow "evil" things like `eval`
 - Disallow archaic language features like `with`
 - Disallow obvious bad practices like `new Number(13)`
+- Force usage of ES2015+ features supported by Node.js v10+
 - Point out places the code could be made shorter. For example:
   ```js
   if (someCondition) return someValue;
@@ -37,23 +37,7 @@ Rules were chosen based on the following criteria:
   ```
   The `else` block is unneeded, since the `if` block contains a `return` statement. `eslint-config-problems` will point this out to you (or auto-fix with the `--fix` option).
 
-### ES2015+
-
-By default `eslint-config-problems` forces the use of ES2015+ features supported by Node.js versions 10 and higher. Here are the rules enforced:
-
-- `no-var` - Use `let`/`const` instead.
-- `object-shorthand` - Use object shorthand where possible.
-- `prefer-arrow-callback` - Use arrow functions as callbacks where possible.
-- `prefer-numeric-literals` - Don't use `parseInt()` to write binary, octal, and hexadecimal numbers, use the literal form instead.
-- `prefer-template` - Use template strings instead of string concatenation.
-- `prefer-spread` - Use the spread operator instead of `.apply` where possible.
-- `prefer-rest-params` - Use rest parameters instead of `arguments`.
-- Use the exponentiation operator (`**`) instead of `Math.pow()` (enforced via `no-restricted-properties`).
-- `prefer-object-spread` - Use object spread where possible, instead of `Object.assign()`
-- Use optional catch bindings when not using the error variable in the catch block (enforced by `no-unused-vars` with `caughtErrors: 'all'`)
-- `prefer-const` - I realize this is very opinionated; if you don't like it, add `prefer-const: off` to your config.
-
-It also sets `ecmaVersion: 2020` in the `parserOptions`, so that ESLint can parse modern code (including `BigInt`) with no additional setup.
+`eslint-config-problems` also sets `ecmaVersion: 2020` in the `parserOptions`, so that ESLint can parse modern code (including `BigInt`) with no additional setup.
 
 ### I disagree with rule X; you missed rule Y
 
