@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   env: {
-    es2020: true, // this also sets ecmaVersion parser option to 2020
+    es2022: true, // this also sets ecmaVersion parser option to 2022
   },
   extends: 'eslint:recommended',
   reportUnusedDisableDirectives: true,
