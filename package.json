@@ -34,7 +34,7 @@
     "prettier": "^2.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.24.0"
+    "eslint": "^8.27.0"
   },
   "prettier": {
     "singleQuote": true,
