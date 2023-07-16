@@ -31,7 +31,7 @@
     "doctoc": "^2.0.0",
     "eslint": "~8.38.0",
     "lodash.defaultsdeep": "^4.6.0",
-    "prettier": "^2.0.0"
+    "prettier": "^3.0.0"
   },
   "peerDependencies": {
     "eslint": "^8.27.0"
