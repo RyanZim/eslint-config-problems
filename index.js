@@ -1,33 +1,27 @@
 'use strict';
+const js = require('@eslint/js');
+
 module.exports = {
-  env: {
-    es2022: true, // this also sets ecmaVersion parser option to 2022
-  },
-  extends: 'eslint:recommended',
-  reportUnusedDisableDirectives: true,
   rules: {
-    // OVERRIDES FOR 'eslint:recommended'
+    ...js.configs.recommended.rules,
+    // OVERRIDES FOR '@eslint/js' reccommended
     'no-debugger': 'warn',
-    'no-mixed-spaces-and-tabs': 'off',
     'no-empty': ['error', { allowEmptyCatch: true }], // Allow empty catch statements
     'no-constant-condition': ['error', { checkLoops: false }], // Allow while (true)
-    'no-unused-vars': ['error', { caughtErrors: 'all' }], // Don't allow unused error argument in catch blocks
     // WARNINGS
     'no-console': 'warn',
     'no-alert': 'warn',
     // PROBLEMS
     // https://eslint.org/docs/latest/rules/#possible-problems
     'array-callback-return': ['error', { checkForEach: true }],
-    'no-constant-binary-expression': 'error',
     'no-constructor-return': 'error',
     'no-duplicate-imports': 'error',
-    'no-new-native-nonconstructor': 'error',
     'no-promise-executor-return': 'error',
     'no-self-compare': 'error',
     'no-unmodified-loop-condition': 'error',
     'no-unreachable-loop': 'error',
-    'no-unused-private-class-members': 'error',
-    'no-use-before-define': ['error', 'nofunc'],
+    'no-use-before-define': ['error', { functions: false }],
+    'no-useless-assignment': 'error',
     'require-atomic-updates': 'error',
     // https://eslint.org/docs/latest/rules/#suggestions
     'accessor-pairs': 'error',
@@ -36,7 +30,6 @@ module.exports = {
     'no-array-constructor': 'error',
     'no-caller': 'error',
     'no-else-return': 'error',
-    'no-empty-static-block': 'error',
     'no-eval': 'error',
     'no-extend-native': 'error',
     'no-extra-bind': 'error',
@@ -48,11 +41,10 @@ module.exports = {
     'no-loop-func': 'error',
     'no-multi-str': 'error',
     'no-new-func': 'error',
-    'no-new-object': 'error',
     'no-new-wrappers': 'error',
+    'no-object-constructor': 'error',
     'no-octal-escape': 'error',
     'no-proto': 'error',
-    'no-return-await': 'error',
     'no-script-url': 'error',
     'no-sequences': 'error',
     'no-undef-init': 'error',

@@ -27,14 +27,16 @@
     "toc": "doctoc README.md && prettier README.md --write",
     "prettier": "prettier \"**/*.{js,md,json}\""
   },
+  "dependencies": {
+    "@eslint/js": "^9.19.0"
+  },
   "devDependencies": {
     "doctoc": "^2.0.0",
-    "eslint": "~8.38.0",
-    "lodash.defaultsdeep": "^4.6.0",
+    "eslint": "~9.19.0",
     "prettier": "^3.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.27.0"
+    "eslint": "^9.19.0"
   },
   "prettier": {
     "singleQuote": true,
