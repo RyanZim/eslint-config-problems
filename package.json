@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "doctoc": "^2.0.0",
-    "eslint": "~9.19.0",
+    "eslint": "~9.39.0",
     "prettier": "^3.0.0"
   },
   "peerDependencies": {
