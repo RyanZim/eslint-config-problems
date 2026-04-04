@@ -21,7 +21,7 @@
     "url": "git+https://github.com/ryanzim/eslint-config-problems.git"
   },
   "scripts": {
-    "eslint": "eslint -c internal-eslintrc.js .",
+    "eslint": "eslint -c internal-config.js .",
     "format": "npm run prettier -- --write && npm run eslint -- --fix",
     "test": "npm run eslint && npm run prettier -- --list-different",
     "toc": "doctoc README.md && prettier README.md --write",
