@@ -16,6 +16,7 @@
   "license": "ISC",
   "author": "Ryan Zimmerman <opensrc@ryanzim.com>",
   "main": "index.js",
+  "files": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ryanzim/eslint-config-problems.git"
